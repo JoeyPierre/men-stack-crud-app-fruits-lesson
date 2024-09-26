@@ -2,10 +2,10 @@ const express = require("express");
 
 const app = express();
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
+app.get("/", async (req, res) => {
+  res.render("index.ejs");
 });
 
-app.get("/", async (req, res) => {
-  res.send("hello, friend!");
+app.listen(3000, () => {
+  console.log("Listening on port 3000");
 });
